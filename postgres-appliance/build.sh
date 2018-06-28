@@ -62,10 +62,10 @@ function squash_new_image() {
             && run_or_fail docker-squash -t $IMGNAME-squashed $IMGNAME-build
 }
 
-run_or_fail docker build "${build_args[@]}" -f Dockerfile.build
+run_or_fail docker build "${build_args[@]}" -f Dockerfile.build .
 
 squash_new_image
 
 run_or_fail docker tag $IMGNAME-squashed spilo:squashed
 
-run_or_fail docker build "${final_args[@]}"
+run_or_fail docker build "${final_args[@]}" .

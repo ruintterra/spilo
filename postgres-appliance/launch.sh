@@ -21,6 +21,12 @@ for i in $(seq 0 7); do
         touch "${PGLOG}/postgresql-$i.csv"
     fi
 done
+
+install -d /home/postgres/ssl
+cp /etc/ssl/postgres/tls.crt /home/postgres/ssl/tls.crt
+cp /etc/ssl/postgres/tls.key /home/postgres/ssl/tls.key
+chown -R postgres:postgres /home/postgres/ssl
+
 chown -R postgres:postgres "$PGROOT"
 
 if [ "$DEMO" = "true" ]; then
