@@ -190,7 +190,7 @@ bootstrap:
   {{/CLONE_WITH_BASEBACKUP}}
   initdb:
     - encoding: UTF8
-    - locale: en_US.UTF-8
+    - locale: ru_RU.UTF-8
     - data-checksums
   {{#USE_ADMIN}}
   users:
