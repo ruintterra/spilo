@@ -25,5 +25,5 @@ function run_or_fail() {
 
 
 run_or_fail docker build -t spilo:squashed -f Dockerfile.build .
-run_or_fail docker build -t registry.intterra.ru:5000/spilo:v2 .
-docker push registry.intterra.ru:5000/spilo:v2
+run_or_fail docker build -t registry.intterra.ru:5000/spilo:v3 .
+docker push registry.intterra.ru:5000/spilo:v3
